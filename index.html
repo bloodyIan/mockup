@@ -13,6 +13,21 @@
     height: 200px;
     background: #aaa;
   }
+  .canclebtn {
+    background-color: #008CBA;
+    padding: 12px 28px;
+    position: fixed;
+    top: 100px;
+  }
+  .publishbtn {
+    background-color: #008CBA;
+    padding: 12px 28px;
+    position: fixed;
+    bottom:200px;
+  }
+  #recipientList{
+    border:1px solid black;
+  }
   </style>
 </head>
 <body>
@@ -48,6 +63,36 @@
       <div class="form-group">
           <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
       </div>
+      <p>Recipient List:</p>
+      <div id="recipientList">
+        <div class="checkbox">
+          <label><input type="checkbox" value=""> arron@microsoft.com</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value=""> bob@microsoft.com</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value=""> ciri@microsoft.com</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value=""> david@microsoft.com</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value=""> elephant@microsoft.com</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value=""> florence@microsoft.com</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value=""> gameofthrone@microsoft.com</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value=""> hamster@microsoft.com</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value=""> illusional@microsoft.com</label>
+        </div>
+      </div>
     </div>
 
     <div class="col-sm-3">
@@ -56,15 +101,110 @@
     </div>
 
     <div class="col-sm-3">
-        <button type="button" class="btn btn-secondary btn-lg">Cancle X</button>
-        <div class="row mt-5"></div>
-        <button type="button" class="btn btn-primary btn-lg">Publish →</button>
+        <button type="button" class="canclebtn">Cancle X</button>
+        <button type="button" class="publishbtn" data-toggle="modal" data-target="#exampleModal">Publish →</button>
     </div>
 
   </div>
 </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Are you sure you would like to publish xx POR and send to following recipients:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <label> arron@microsoft.com</label>
+          </div>
+          <div>
+            <label> bob@microsoft.com</label>
+          </div>
+          <div>
+            <label> ciri@microsoft.com</label>
+          </div>
+          <div>
+            <label> david@microsoft.com</label>
+          </div>
+          <div>
+            <label> elephant@microsoft.com</label>
+          </div>
+          <div>
+            <label> florence@microsoft.com</label>
+          </div>
+          <div>
+            <label> gameofthrone@microsoft.com</label>
+          </div>
+          <div>
+            <label> hamster@microsoft.com</label>
+          </div>
+          <div>
+            <label> illusional@microsoft.com</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No X</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Yes ✓</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
+    <!-- Modal 2-->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">xx POR has been published and sent to following recipients:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <label> arron@microsoft.com</label>
+          </div>
+          <div>
+            <label> bob@microsoft.com</label>
+          </div>
+          <div>
+            <label> ciri@microsoft.com</label>
+          </div>
+          <div>
+            <label> david@microsoft.com</label>
+          </div>
+          <div>
+            <label> elephant@microsoft.com</label>
+          </div>
+          <div>
+            <label> florence@microsoft.com</label>
+          </div>
+          <div>
+            <label> gameofthrone@microsoft.com</label>
+          </div>
+          <div>
+            <label> hamster@microsoft.com</label>
+          </div>
+          <div>
+            <label> illusional@microsoft.com</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">View POR</button>
+          <button type="button" class="btn btn-primary">Return to home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="jumbotron text-center fixed-bottom" style="margin-bottom:0">
   <p>Microsoft ©</p>
 </div>
 
